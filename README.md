@@ -9,4 +9,6 @@ To set up: ``` npm install ```
 
 To run webpack in dev mode : ``` npm run dev ```
 
+To run webpack in watch and dev mode: ``` npm run watch ```
+
 To run webpack in production mode: ``` npm run build ```
