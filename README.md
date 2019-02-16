@@ -1,6 +1,8 @@
 # webpack-seed
 A simple webpack 4 seed application with Babel7
 
+![Webpack + Babel](https://github.com/michaelmendoza/webpack-seed/blob/master/webpack_babel.png)
+
 # Setup
 
 To set up: ``` npm install ```
