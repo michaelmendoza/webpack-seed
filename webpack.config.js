@@ -1,6 +1,5 @@
-// webpack.config.js
-
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -8,12 +7,16 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
-  mode: 'production',
   module: {
-    rules: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      use: { loader: "babel-loader" }
-    }] 
-   }
+    rules: [
+      { test: /\.(js)$/, loader: 'babel-loader', exclude: /node_modules/ },
+    ]
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      filename: "./index.html",
+      path: path.resolve(__dirname, 'dist')
+    })
+  ]
 };

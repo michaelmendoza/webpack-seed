@@ -1,12 +1,9 @@
 
-console.log('Welcome to Webpack');
+var app = document.getElementById("app-hook");
 
-var ele = document.createElement('div');
-ele.innerHTML = '';
-
-const list = ['Apple', 'is', 'in', 'the', 'tree.'];
+const list = ['Weclome to Webpack!', 'This is a starter seed app.'];
 list.forEach( (item) => {
-  ele.innerHTML = ele.innerHTML + item + ' ';
+  var node = document.createElement('div');
+  node.textContent = item;
+  app.appendChild(node)
 })
-
-document.body.appendChild(ele);
